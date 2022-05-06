@@ -6,6 +6,7 @@ import { CategoryComponent } from './category/category.component';
 import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'header', component: HeaderComponent},
   {path: 'category', component: CategoryComponent},
  {path: 'category/:catId', component:ProductComponent},
- {path:'subcategory/:id',component:SubcategoryComponent},
+ {path:'subcategory/:catId',component:SubcategoryComponent},
+ {path:'productdetails/:_id',component:ProductDetailsComponent},
  
  
 ];

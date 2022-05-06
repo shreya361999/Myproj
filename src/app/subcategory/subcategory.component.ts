@@ -10,11 +10,11 @@ import { DataService } from '../services/data.service';
 })
 export class SubcategoryComponent implements OnInit {
   subs:any;
-  id1:any;
+  catId:any;
 
   constructor(private routes: ActivatedRoute, private dataService: DataService) {
-    this.id1 = this.routes.snapshot.paramMap.get('catId')
-    this.dataService.getSubcategory(this.id1).subscribe( response=>{this.subs=response.data})
+    this.catId = this.routes.snapshot.paramMap.get('catId')
+    this.dataService.getSubcategory(this.catId).subscribe( response=>{this.subs=response.data})
     }
 
   ngOnInit(): void {

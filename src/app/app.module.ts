@@ -11,6 +11,7 @@ import { ProductComponent } from './product/product.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 
@@ -20,7 +21,7 @@ import { SubcategoryComponent } from './subcategory/subcategory.component';
     NavbarComponent,
     HeaderComponent,
     CategoryComponent, 
-    ProductComponent, AboutComponent, ContactComponent, SubcategoryComponent, 
+    ProductComponent, AboutComponent, ContactComponent, SubcategoryComponent, ProductDetailsComponent, 
   ],
   imports: [
     BrowserModule,

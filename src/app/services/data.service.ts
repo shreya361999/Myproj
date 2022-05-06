@@ -18,12 +18,15 @@ export class DataService {
   getProducts(id:any) : Observable < any > {
     return this.http.get<any>('http://apolis-grocery.herokuapp.com/api/products/cat/'+id)
   }
-  getSubcategory(id:any): Observable<any>{
+  getSubcategory(catId:any): Observable<any>{
 
-    return this.http.get<any>('http://apolis-grocery.herokuapp.com/api/products/sub/'+id)
+    return this.http.get<any>(`http://apolis-grocery.herokuapp.com/api/subcategory/${catId}`)
   }
-  getProductDetail(id:any) : Observable < any > {
-    return this.http.get<any>('http://apolis-grocery.herokuapp.com/api/products/'+id)
+  getProductsDetails(_id:any): Observable<any>{
+
+    return this.http.get<any>(`http://apolis-grocery.herokuapp.com/api/products/${_id}`)
+
   }
+ 
   
 }
