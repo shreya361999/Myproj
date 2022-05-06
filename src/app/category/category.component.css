@@ -1,0 +1,7 @@
+.cat{
+    text-align: center;
+}
+.card-deck, .cat{
+    background-color: lightgray;
+
+}
