@@ -12,6 +12,10 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -21,12 +25,13 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     NavbarComponent,
     HeaderComponent,
     CategoryComponent, 
-    ProductComponent, AboutComponent, ContactComponent, SubcategoryComponent, ProductDetailsComponent, 
+    ProductComponent, AboutComponent, ContactComponent, SubcategoryComponent, ProductDetailsComponent, RegisterComponent, LoginComponent, HomeComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
     
   ],
   providers: [],

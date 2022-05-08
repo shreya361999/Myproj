@@ -7,13 +7,20 @@ import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './guard/auth.guard';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
   {path:'',redirectTo:'/header/category' , pathMatch: "full"},
-  {path: 'about', component: AboutComponent},
-  {path: 'contact', component: ContactComponent},
+  {path: 'about', component: AboutComponent, canActivate:[AuthGuard]},
+  {path: 'contact', component: ContactComponent, canActivate:[AuthGuard]},
+  {path: 'home', component: HomeComponent, canActivate:[AuthGuard]},
   {path: 'header', component: HeaderComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'category', component: CategoryComponent},
  {path: 'category/:catId', component:ProductComponent},
  {path:'subcategory/:catId',component:SubcategoryComponent},
